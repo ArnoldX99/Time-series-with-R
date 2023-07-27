@@ -25,36 +25,39 @@ boxplot(AP ~ cycle(AP))
 ### Detail
 
 First of all data( AirPassengers ) is R's self-taking data. We give the value to variable AP, and print it :
+![1](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/44f9b5bb-c333-4e5e-abdb-b074a588ab29)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\1.png)
 
 #### Summary ####
 
 Then we use the command ***summary***(AP) to find some basic information about data, such as Mean, minimum and maximum value...
+![2](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/61e897eb-4bca-4854-ab1c-05366582822a)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\2.png)
 
 #### class ####
 
 Another  command is ***class*** , Which shows us the category of statistics. For example in this case, dataset is a time series, so it returns 'ts'.
+![3](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/60836645-2097-492b-8ad2-1e8bf7b6e8d0)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\3.png)
 
 #### start,end,frequency ###
 
 If we want to explore more about the time series, we can use commands start, end, frequency. ***start*** means the time of first observation, ***end*** means the time of last observation, ***frequency*** means the count of observation in the time period.
+![4](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/a7ca3d02-0bd5-41e2-8db0-e2f6e792eadc)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\4.png)
+
 
 #### plot,boxplot, ####
 
 Now we want to do something with visualization. First of all we'd like to plot a figure to show the relationship between the time and passengers. Simply just need ***plot***(AP), and we use command ***'ylab=''*** to design the label.
+![5](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/d0889297-fa3b-4ff4-9008-296fe416a628)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\5.jpg)
+
 
 If we want to overview the distribution of data roughly, we may use ***boxplot***.  Recall the definition of boxplot:
+![10](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/2ae8429c-bd6b-43ec-9f70-fb5e2adc3588)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\10.jpg)
+
 
 **Note** : $IQR$ means *Inter-Quartile Range*, $IQR=Q_3-Q_2$,That is, the span of two quartiles. 
 
@@ -64,23 +67,24 @@ For this program, the boxplot is :
 boxplot(AP ~ cycle(AP))
 ```
 
+![11](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/b13e0b5b-f139-42bd-b211-0ce0aba7fc24)
 
-
- ![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\11.jpg)
 
 From the boxplot here we can describe that data is broadly concentrated, with Jun, July, August are distributer more dispersed relatively.
 
 #### Aggregate ####
 
 Sometime we need to do operation like 'Fold' or 'summary', command ***Aggregate*** satisfies the need properly. Let's see the performance of it. We define a variable *Agg*, with the code: *Agg<-aggregate(APP)*, we get:
+![6](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/38995b6d-1541-48a0-9da1-7b34ca874556)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\6.jpg)
+
 
 We can see each row becomes the summary of data for all the months.
 
 Then we plot the figure, it shows:
+![7](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/956aaa1a-9adb-49f7-9311-31d17bb35f88)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\7.jpg)
+
 
 We try to find some further functions of the command *aggregate*.
 
@@ -94,8 +98,9 @@ x <- data.frame(name = c('Arno','Jack','Lily','Amy'),
 ```
 
 Hence we get a data-frame like this:
+![8](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/2b5307f7-63f4-4660-bdff-53c02be8ccba)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\8.jpg)
+
 
 Now we want to find the average number of age and height for each gender.
 
@@ -107,8 +112,9 @@ y<-aggregate(x[,3:4],by=list(sex=x$sex),FUN = mean)
 ```
 
 The result will be :
+![9](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/a0d3a2ab-3506-441d-a0db-b3f6efb0bca9)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\9.jpg)
+
 
 #### cycle ####
 
@@ -121,8 +127,8 @@ boxplot(AP ~ cycle(AP))
 So what's the cycle means here and how to use it?
 
 let's see how we get for $cycle(AP)$:
+![12](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/3ff56175-d68e-42f5-82a9-a6bd1de8db36)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\12.jpg)
 
 For the official definition, $cycle$ gives the positions in the cycle of each observation. Hence, here we can match each month's Air-passengers data with the label 1,2,3...,then plot corresponding boxplot.
 
@@ -140,7 +146,7 @@ lcm(x)
 
 The explanation of commands are:
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\13.jpg)
+![13](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/35d66455-f98c-42b0-a4f3-2cb12ab22ac2)
 
 
 
@@ -178,8 +184,8 @@ is.ts(x)
 ```
 
 With the arguments:
+![14](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/a8929abb-6d32-4a49-bb7d-d106c36be1c5)
 
-![](D:\教学资料\研究生\时间序列\Week1\Week1 homework\14.jpg)
 
 We can see this case to gaather further understanding. Look at the code:
 
@@ -197,8 +203,8 @@ $start = 1958 $means the time series start from 1958, and tne $freq = 12$ means 
 Sometimes we need to combine objects by Rows or Columns. Respectively, we use $rbind$ and $cbind$. 
 
 Focus on code $cbind(Elec.ts, Beer.ts, Choc.ts))$, that combines 3 lists of data together as columns. we can plot it to further prove it:
+![15](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/bf353f51-410f-4de8-b80e-82abf435f620)
 
-![image-20220916130945452](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220916130945452.png)
 
 ## Program 1.5.5 Decomposition in R
 
@@ -225,7 +231,7 @@ $decompose()$ function is to input a time series, and decompose it into 4 terms 
 
 With the code $decompose(Elec.ts)$, we can see the result:
 
- ![image-20220917155200656](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220917155200656.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/600137a4-8e80-4ff1-8fa1-2287e47fd97e)
 
 All the informations of decomposed time series are given.
 
@@ -237,9 +243,9 @@ Elec.decommult <- decompose(Elec.ts, type = "mult")
 
 Plot the 2-type figure:
 
-![image-20220917161435536](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220917161435536.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/38a0361a-ce7a-4e3f-8557-443d507d8899)
 
-![image-20220917161450320](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220917161450320.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/b15c0e08-915c-49df-9585-5e5055ca3f5b)
 
 #### ts.plot ####
 
@@ -251,7 +257,7 @@ Plot several time series on a common plot. Unlike plot.ts the series can have a 
 ts.plot(cbind(Trend, Trend + Seasonal), lty = 1:2)
 ```
 
-![image-20220917170659875](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220917170659875.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/e32f9af6-5148-4c16-89fa-15b38d05f998)
 
 This image shows the comparison of only trend and trend with seasonal effect.  *Note* : $'lty'$ means types of lines, in order to distinguish different figures.
 
@@ -259,7 +265,7 @@ This image shows the comparison of only trend and trend with seasonal effect.  *
 
 ## Page 24 1 ##
 
-![image-20220917171438356](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220917171438356.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/307c1929-f91b-4dc5-a048-37fe96614836)
 
 #### Excercise a). ####
 
@@ -272,7 +278,7 @@ Since we already have *** chocolate.ts*** in the provious program.
 plot(choc.ts)
 ```
 
-![image-20220918112239209](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220918112239209.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/04fb6411-8763-46d0-a8e3-d694cd1b3ac4)
 
 Then we use aggregate function to show the annual data:
 
@@ -284,7 +290,7 @@ plot(Agg)
 
 
 
-![image-20220918112630687](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220918112630687.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/d59d8f96-9e2c-4129-99c2-9dc225b63fad)
 
 We can see through the annual data that the sales volumn is generally rising since 1960.
 
@@ -294,7 +300,7 @@ Then we try to find out more about the boxplot with the code:
 boxplot(Agg)
 ```
 
-![image-20220918133401902](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220918133401902.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/45ecfadc-c65a-4c68-967a-66c925f2a4e5)
 
 We can do some comments on this boxplot. First obviously we can see the **median** is around 50000 a year. Then consider about the **skewness**. Because the median here is closer to the lower bound, so the data is a right-skewness distribution. There are two **outliers** above the maximum.
 
@@ -310,7 +316,7 @@ plot(choc.decom)
 
 With the figure:
 
-![image-20220919014850424](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220919014850424.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/42caa452-ff45-412d-8ed8-2477401301c5)
 
 Furthermore, we want to superimposed the seasonal impact on for the time series.
 
@@ -323,7 +329,7 @@ ts.plot(cbind(choc.trend,choc.trend + choc.seas), lty = 1:2)
 
 With the result:
 
-![image-20220919015603128](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220919015603128.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/5f2e0012-d6ab-473b-be32-cc0f5c5de41c)
 
 
 
