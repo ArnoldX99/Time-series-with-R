@@ -111,7 +111,7 @@ Using the ar function, we can get the ideal order = 2 based on **AIC**. The para
 
  Is the model in Equation stationary or non-stationary?
 
-![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/24b94dec-4db9-4957-8d13-95350db4749a)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/1f6e22d6-de9b-4cb9-b4c8-837aacf90feb)
 
 ![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/6116f089-a462-453a-a0e1-e83cd2b93a42)
 
