@@ -1,6 +1,4 @@
-# HomeWork4
-
-**徐润奇 2220009454**
+# 4_AR_Model
 
 ## Simulation in R
 
@@ -12,9 +10,9 @@ x <- seq(-3,3, length = 1000)
 hist(rnorm(100), prob = T); points(x, dnorm(x), type = "l")
 ```
 
-![image-20221123115414391](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115414391.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/5a9e6170-c6af-4d7b-9fd7-f59f4cf45022)
 
-![image-20221123115437798](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115437798.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/f29703dc-4d9f-4c67-9ec4-92e2d5a51777)
 
 ## 4.5.7 Simulation
 
@@ -31,25 +29,23 @@ x.ar$ar
 x.ar$ar[1] + c(-2,2) * sqrt(x.ar$asy.var[1,1])
 ```
 
-![image-20221123115745129](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115745129.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/3f9cf29b-f7c1-4219-b2c6-068b80f9a756)
 
 The ACF is :
 
-![image-20221123115800569](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115800569.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/9e58da56-5046-4bd3-9dec-fe9b67a0b6c7)
 
 The PACF is :
 
-![image-20221123115841636](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115841636.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/05eb2eac-2124-414f-a64d-7497857bcfad)
 
 The coefficients of AR(1) model is :
 
-![image-20221123115935722](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123115935722.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/224a5e32-4235-4e51-bdbc-619ba398db04)
 
 ## 4.Write a program
 
-![image-20221123120053082](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123120053082.png)
-
-![image-20221123120103833](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123120103833.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/f3447265-fc3e-4264-985d-2848aabdcc7f)
 
 ### (a). 
 
@@ -62,7 +58,7 @@ for (t in 3:1000) x[t] <- 5/6*x[t-1] - 1/6*x[t-2] + w[t]
 plot(x, type = "l")
 ```
 
-![image-20221123120456212](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123120456212.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/db920a45-39ac-4c66-9d3d-54e8b61b17a0)
 
 ### (b). 
 
@@ -73,9 +69,9 @@ acf(x)
 pacf(x)
 ```
 
-![image-20221123120815648](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123120815648.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/ebb1f0d2-351a-45ee-a7e4-41eb7d6086c2)
 
-![image-20221123120829208](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123120829208.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/ae07a3d8-1a35-40e5-bb5d-182eb543169f)
 
 There is a gradual  exponential decay in the correlations, and We can observe from the partial  correlogram that it has no significant correlations except the value at lag 1 and lag 2.  Thus, we can assume that this simulated data suits the AR(2) process.
 
@@ -95,7 +91,7 @@ nd ", x.ar$ar[2], "respectively.\n")
 45147 respectively.
 ```
 
-![image-20221123121209378](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123121209378.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/5b4d53a5-1ac4-419d-8bb8-6cedf7ad791a)
 
 ### (d) 
 
@@ -107,7 +103,7 @@ x.ar$ar[1] + c(-2,2) * sqrt(x.ar$asy.var[1,1])
 x.ar$ar[2] + c(-2,2) * sqrt(x.ar$asy.var[2,2])
 ```
 
-![image-20221123121436562](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123121436562.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/f8f0a369-636c-4f24-ad21-c64a83a671ff)
 
 Using the ar function, we can get the ideal order = 2 based on **AIC**. The parameter estimate for the fitted AR(1) model are 𝛼̂1 = 0.8035477 and 𝛼̂2 = −0.1745147 respectively. Comparing to the underlying model 𝛼1 = 0.833 and 𝛼2 = 0.167, the approximate 95% confidence interval does contain the value of  the model parameters as expected, giving us no reason to doubt the implementation  of the model
 
@@ -115,9 +111,9 @@ Using the ar function, we can get the ideal order = 2 based on **AIC**. The para
 
  Is the model in Equation stationary or non-stationary?
 
-![image-20221123122429698](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123122429698.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/24b94dec-4db9-4957-8d13-95350db4749a)
 
-![image-20221123122441421](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123122441421.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/6116f089-a462-453a-a0e1-e83cd2b93a42)
 
 ### (f) 
 
@@ -127,6 +123,6 @@ Plot the correlogram of the residuals of the fitted model, and comment on the pl
 acf(x.ar$resid[-(1:2)])
 ```
 
-![image-20221123122531663](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20221123122531663.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/633355b4-02b9-4ff6-b4d2-9514f65410d2)
 
 The correlogram of the residual series for AR(2) model fitted to the simulated  series. The correlogram is approximately white noise so that, in the absence of  further information, the correlation and trends can be explained.
