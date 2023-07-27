@@ -1,11 +1,11 @@
 # Homework for week2
 
-**徐润奇 222000944**
+**徐润奇 ArnoldXu** xurunqi.arnold@gmail.com
 
 ## 2.2.5 Autocorrelation
 
 ```R
-wave.dat <- "D:\\教学资料\\研究生\\时间序列\\data\\chapter2 wave.dat.txt"
+wave.dat <- "D:\\data\\chapter2 wave.dat.txt"
 wave <- read.table(wave.dat, header = TRUE)
 attach(wave)
 ts.plot(waveht) 
@@ -81,7 +81,8 @@ And we can use $detach()$ to turn back original situation.
 
  We may meet some troubles here:
 
-![image-20220919045453346](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220919045453346.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/83b0af33-3589-4384-b7e5-8a31a24a4880)
+
 
 Even if we could run the code and give out the result,  the default won't disappear.
 
@@ -89,7 +90,7 @@ The help page for `attach()` notes that *attach can lead to confusion*. The [Goo
 
 By applying $attach()$ , then we plot the variable $waveht$:
 
-![image-20220919181831008](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220919181831008.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/7bfff830-041f-4d45-afca-215d0b58c40e)
 
 #### Function acf()
 
@@ -109,9 +110,9 @@ Define a variable $acf_1$, such that: The maximum lag order, n determines the le
 acf_1 <- acf(waveht)$acf
 ```
 
-![image-20220920102511384](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920102511384.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/d677efd4-cf63-4ff6-9257-77d0a9c1207b)
 
-![image-20220920103218784](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920103218784.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/1ce3439f-9087-4c93-b324-93ea6b8c2b7c)
 
 Since nearly excpect around origin, nearly all the bars lies inside the blue line, it means no obvious correlation for this group of data.
 
@@ -134,7 +135,7 @@ plot(waveht[1:396],waveht[2:397])
 
 The figure shows the raltion between a term with next term.
 
-![image-20220920103637393](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920103637393.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/223587c5-2cb9-4835-95ca-7c4a699c9c9c)
 
 We can see roughly it has no obvious autocorrelation.
 
@@ -156,19 +157,19 @@ sd(AP.decom$random[7:138])
 
 First of all we draw a acf figure of data:
 
-![image-20220920153423362](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920153423362.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/9d407105-ca7f-42b4-9f7f-4b7d63a1e005)
 
 We can see here is a strong effect of autocorrelations.
 
 Compare data AP wtih AP eliminated trend:
 
-![image-20220920154751954](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920154751954.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/a9cc0454-168e-42c4-8e7e-194ed0457f35)
 
 We can see after substract the trend, standard diviation cut down obviouly.
 
 ## Page 42.2 Vineyard
 
-![image-20220920144518699](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144518699.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/97b2eacd-952c-4738-a88a-55117bee5dcb)
 
 ```R
 ssv <- matrix(c(39, 35, 16, 18, 7, 22, 13, 18, 20, 9, -12, -11, -19, -9, -2, 16))
@@ -192,30 +193,30 @@ First we input the data, save the data from 2 different vinyards as $ssv$ and $c
 
 Plot the figure by using command ts.plot, we get:
 
-![image-20220920144707322](D:\教学资料\研究生\时间序列\Week1\Week1 homework\image-20220920144707322.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/224d0d7e-6b6b-408a-ae9d-cba462f1a351)
 
-![image-20220920144723073](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144723073.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/4ca3a27f-0004-448c-a4ca-c521111dfbf0)
 
 For each time series, we draw a scatter plot as below:
 
-![image-20220920144808352](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144808352.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/4e6b5d06-6f46-484f-9d60-bf0c159aaa49)
 
-![image-20220920144820554](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144820554.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/15ad064a-5f5a-4ccb-8a34-dad91fd619d7)
 
 Produce the $acf$ for both time series we get :
 
-![image-20220920144905794](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144905794.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/2c3bcc03-4e7e-4cce-92f0-d38cdefe5662)
 
-![image-20220920144918121](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920144918121.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/70cd6cb6-9764-47a1-8510-08841a378833)
 
 We can see both for SSV and CCV, we have no obvious autocorrelation for them.
 
 ## Page 42.3 global temperature
 
-![image-20220920150431244](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920150431244.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/18d39eb1-ab14-4b1d-b338-1b56508b74b1)
 
 ```R
-www <- "D://教学资料//研究生//时间序列//data//chapter1 global.txt"
+www <- "D://data//chapter1 global.txt"
 global <- scan(www)
 global.ts <- ts(global, st = c(1856, 1), end = c(2005, 12),fr = 12)
 # Decompose the series
@@ -238,7 +239,7 @@ acf_random <- acf(global.random,na.action = na.pass)$acf
 
 First of all for this question we decompose the data, it give us the figure:
 
-![image-20220920150557442](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920150557442.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/b6f3859e-c3cb-4e24-b25f-6300345f4d0c)
 
 We can see after eliminating the random, seasonal, trend effect, the trend of temperature is rising in a steady pace.
 
@@ -246,24 +247,25 @@ As we expect, this series of data will be effectted by the seasonal effects.
 
 Compare the standard deviation of the original series with the deseasonalised series, we get:
 
-![image-20220920150856715](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920150856715.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/3693495a-b943-405e-8646-1b9f8558d223)
 
 It obviously has difference for deviation.
 
 Then we produce a plot of the trend with a superimposed seasonal effect:
 
-![image-20220920151014095](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920151014095.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/774432ac-07e9-47ed-8002-ba3b2eab93fb)
 
   We use acf function to plot the correlogram of the residuals (random component) :
 
-![image-20220920151920339](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920151920339.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/569c9bd9-dffc-4107-8602-f8b8920e6ebb)
 
 We can see here still has periodicity in the random terms. Hence we need to find out more to eliminate it.  
 
 ### 42.5 
 
-![image-20220920152028012](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920152028012.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/17f1b7ad-d888-40e9-a069-c14983b06d82)
 
-![image-20220920152324690](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920152324690.png)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/be002cb5-d1e2-441b-b2a5-b2b99b6d40ba)
 
-***proof***  ![image-20220920153240682](C:\Users\10306\AppData\Roaming\Typora\typora-user-images\image-20220920153240682.png)
+***proof***  ![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/d2e23473-19f8-448e-babb-db20d2c91d97)
+
