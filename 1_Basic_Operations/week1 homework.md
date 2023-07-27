@@ -1,6 +1,7 @@
-# Week1 Homework 
+# 1_Basic_Operations
 
-**徐润奇 2220009454**
+
+**徐润奇 ArnoldXu** xurunqi.arnold@gmail.com
 
 ## Program 1.4.1 A flying start: Air passenger bookings
 
@@ -155,7 +156,7 @@ The explanation of commands are:
 ### Code ###
 
 ```R
-www <- "D:\\教学资料\\研究生\\时间序列\\data\\chapter1 CBE.txt"
+www <- "D:\\data\\chapter1 CBE.txt"
 CBE <- read.table(www, header = T)
 CBE[1:4, ]
 class(CBE)
