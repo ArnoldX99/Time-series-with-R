@@ -136,7 +136,7 @@ ns(1958-1990) and forecasts(1991-2000) original series')
 Elec.pred.ts
 ```
 
-![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/1a4826b7-7589-4e33-950d-2330d1390829)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/a50cb11e-73f9-443e-a69a-f3656c19e798)
 
 
 
