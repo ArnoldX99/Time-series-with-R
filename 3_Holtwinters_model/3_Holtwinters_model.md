@@ -122,7 +122,7 @@ We use $predict$ function here. Input the dataset first, then use  $n.ahead$  co
 
 ## 7. b),c),d) 
 
-![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/ea2a278f-dea4-4eb6-b84f-3cf836c586c2)
+![image](https://github.com/ArnoldX99/Time-series-with-R/assets/64125777/e3880b60-316f-46a7-95f5-10d1ac01251a)
 
 ```R
 www <- 'D://data//chapter1 global.txt'
